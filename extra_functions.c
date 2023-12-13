@@ -51,6 +51,19 @@ void pall(stack_t **stack, unsigned int line_num)
 	(void)line_num;
 }
 
+void pint(stack_t **stack, unsigned int line_number)
+{
+	if (*stack)
+	{
+		printf("%d\n", (*stack)->n);
+	}
+	else
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+}
+
 /**
  * free_list -  a function that frees a list_t list
  * @head: head of the linked list
