@@ -22,6 +22,12 @@ void add(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 
+/**
+ * nop - Does nothing.
+ * @stack: A double pointer to the top of the stack (unused).
+ * @line_number: The line number in the source file where the operation occurs (unused).
+ */
+
 void nop(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
