@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * exec - handles the execution of the opcode
+ * @stack: A double pointer to the top of the stack.
+ * @line_num: The line number in the monty source file.
+ */
+
 void exec(stack_t **stack, unsigned int line_num)
 {
 	unsigned int i = 0;

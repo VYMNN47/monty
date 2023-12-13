@@ -2,7 +2,6 @@
 
 /**
  * free_stack -  a function that frees a list_t list
- * @head: head of the linked list
  * @stack: A pointer to the top of the stack.
  */
 
