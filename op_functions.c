@@ -38,6 +38,14 @@ void push(stack_t **stack, unsigned int line_num)
 	*stack = new_node;
 }
 
+/**
+ * pall - Prints all elements in the stack
+ * @stack: Pointer to the head of the stack
+ * @line_num: Line number in the Monty file
+ *
+ * Return: Void
+ */
+
 void pall(stack_t **stack, unsigned int line_num)
 {
 	stack_t *node = *stack;
