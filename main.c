@@ -8,6 +8,7 @@ int main(int argc, char **argv)
 	char *buff = NULL;
 	size_t buff_len = 0;
 	unsigned int line_num = 1;
+	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 
 
@@ -25,8 +26,10 @@ int main(int argc, char **argv)
 	}
 
 
-	while ((getline(&buff, &buff_len, filem)) != -1)
+	while (read_line > 0)
 	{
+		read_line = getline(&buff, &buff_len, filem);
+
 		if (*buff == '\n')
 		{
 			line_num++;
@@ -40,7 +43,10 @@ int main(int argc, char **argv)
 			continue;
 		}
 		info.arg = strtok(NULL, " \t\n");
-		exec(&stack, line_num);
+		if (read_line > 0)
+		{
+			exec(&stack, line_num);
+		}
 		line_num++;
 	}
 	free(buff);
