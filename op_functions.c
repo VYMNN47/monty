@@ -59,6 +59,12 @@ void pall(stack_t **stack, unsigned int line_num)
 	(void)line_num;
 }
 
+/**
+ * pint - Prints the value at the top of the stack.
+ * @stack: A pointer to the stack.
+ * @line_number: The current line number in the Monty file being processed.
+ */
+
 void pint(stack_t **stack, unsigned int line_number)
 {
 	if (*stack)
