@@ -6,9 +6,9 @@ void exec(stack_t **stack, unsigned int line_num)
 	instruction_t opc[] =
 	{
 		{"push", push}, {"pall", pall}, {"pint", pint},{"pop", pop},
-		{"swap", swap}, {"add", add}, {"nop", nop}, {NULL, NULL}
+		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
+		{NULL, NULL}
 /**
- *		{"nop", nop}, {"sub", sub},
  *		{"div", div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
  *		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
  *		{"queue", queue}, {"stack", stack}, {NULL, NULL}
