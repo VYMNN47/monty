@@ -17,7 +17,7 @@ void push(stack_t **stack, unsigned int line_num)
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
 	}
-	value = atoi(info.arg);
+	value = _atoi(info.arg);
 
 	if (value < 0)
 	{
