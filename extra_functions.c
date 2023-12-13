@@ -19,7 +19,7 @@ void push(stack_t **stack, unsigned int line_num)
 	}
 	value = atoi(info.arg);
 
-	if (!value)
+	if (value < 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
