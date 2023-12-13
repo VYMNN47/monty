@@ -11,18 +11,19 @@ void push(stack_t **stack, unsigned int line_num)
 {
 	stack_t *new_node;
 	int value;
+	(void)line_num;
 
 	if (info.arg == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_num);
-		exit(EXIT_FAILURE);
+		flag = 1;
+		return;
 	}
 	value = _atoi(info.arg);
 
 	if (value < 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_num);
-		exit(EXIT_FAILURE);
+		flag = 1;
+		return;
 	}
 
 	new_node = malloc(sizeof(stack_t));

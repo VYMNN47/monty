@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 			continue;
 		}
 		info.arg = strtok(NULL, " \t\n");
-		exec(&stack, line_num);
+		exec(&stack, line_num, buff, filem);
 		line_num++;
 	}
 	free(buff);

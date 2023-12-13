@@ -44,9 +44,9 @@ typedef struct info_s
 } info_t;
 
 extern info_t info;
-
+extern int flag;
 int _atoi(const char *str);
-void exec(stack_t **stack, unsigned int line_num);
+void exec(stack_t **stack, unsigned int line_num, char *buff, FILE *filem);
 void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
