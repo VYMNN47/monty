@@ -46,5 +46,5 @@ int main(int argc, char **argv)
 	free(buff);
 	free_stack(stack);
 	fclose(filem);
-	exit(EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
