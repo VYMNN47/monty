@@ -1,11 +1,5 @@
 #include "monty.h"
 
-/**
- * add_node - adds a new node at the beginning of a list_t list
- * @head: current head node
- * @str: string to be duplicated
- * Return: returns new element or NULL if failure
- */
 
 void push(stack_t **stack, unsigned int line_num)
 {
@@ -83,7 +77,8 @@ void swap(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
-	if (!*stack || !(*stack)->next) {
+	if (!*stack || !(*stack)->next)
+	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
