@@ -1,6 +1,12 @@
 #include "monty.h"
 
-
+/**
+ * push - Adds a new node with a given value to the stack
+ * @stack: Pointer to the head of the stack
+ * @line_num: Line number in the Monty file
+ *
+ * Return: Void
+ */
 void push(stack_t **stack, unsigned int line_num)
 {
 	stack_t *new_node;
