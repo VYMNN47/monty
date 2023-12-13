@@ -1,22 +1,23 @@
 #include "monty.h"
 
 /**
- * free_list -  a function that frees a list_t list
+ * free_stack -  a function that frees a list_t list
  * @head: head of the linked list
+ * @stack: A pointer to the top of the stack.
  */
 
 void free_stack(stack_t *stack)
 {
-        stack_t *temp;
+	stack_t *temp;
 
-        if (!stack)
-                return;
+	if (!stack)
+		return;
 
-        while ((temp = stack) != NULL)
-        {
-                stack = stack->next;
-                free(temp);
-        }
+	while ((temp = stack) != NULL)
+	{
+		stack = stack->next;
+		free(temp);
+	}
 }
 
 /**
@@ -29,24 +30,27 @@ void free_stack(stack_t *stack)
 
 int _atoi(const char *str)
 {
-    int result = 0;
-    int sign = 1;
+	int result = 0;
+	int sign = 1;
 
-    while (*str == ' ' || *str == '\t' || *str == '\n')
-        str++;
+	while (*str == ' ' || *str == '\t' || *str == '\n')
+		str++;
 
-    if (*str == '+' || *str == '-') {
-        sign = (*str++ == '+') ? 1 : -1;
-    }
+	if (*str == '+' || *str == '-')
+	{
+		sign = (*str++ == '+') ? 1 : -1;
+	}
 
-    while (*str >= '0' && *str <= '9') {
-        result = result * 10 + (*str - '0');
-        str++;
-    }
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
 
-    if (*str != '\0' && (*str < '0' || *str > '9')) {
-        return -1;
-    }
+	if (*str != '\0' && (*str < '0' || *str > '9'))
+	{
+		return (-1);
+	}
 
-    return sign * result;
+	return (sign * result);
 }
