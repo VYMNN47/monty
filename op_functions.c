@@ -78,6 +78,15 @@ void pint(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * pop - Removes the top element of the stack.
+ *
+ * @stack: A pointer to the stack.
+ * @line_number: The current line number in the Monty file being processed.
+ *
+ * Return: No return value.
+ */
+
 void pop(stack_t **stack, unsigned int line_number)
 {
 	if (*stack)
