@@ -2,6 +2,14 @@
 
 info_t info = {NULL, 0};
 
+/**
+ * main - Entry point for executing Monty bytecode
+ * @argc: Number of command-line arguments
+ * @argv: Array of command-line arguments
+ *
+ * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure
+ */
+
 int main(int argc, char **argv)
 {
 	FILE *filem;
