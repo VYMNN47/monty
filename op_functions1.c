@@ -25,7 +25,7 @@ void add(stack_t **stack, unsigned int line_number)
 /**
  * nop - Does nothing.
  * @stack: A double pointer to the top of the stack (unused).
- * @line_number: The line number in the source file where the operation occurs (unused).
+ * @line_number: The line number in the source file where the operation occurs.
  */
 
 void nop(stack_t **stack, unsigned int line_number)
@@ -33,6 +33,12 @@ void nop(stack_t **stack, unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+
+/**
+ * sub - Subtracts the top element of the stack from the second top element.
+ * @stack: A double pointer to the top of the stack.
+ * @line_number: The line number in the source file where the operation occurs.
+ */
 
 void sub(stack_t **stack, unsigned int line_number)
 {
