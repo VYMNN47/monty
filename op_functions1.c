@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * add - Adds the top two elements of the stack.
+ * @stack: A double pointer to the top of the stack.
+ * @line_number: The line number in the source file where the operation occurs.
+ */
+
 void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
