@@ -1,21 +1,26 @@
 #include "monty.h"
 
+/**
+ * exec - handles the execution of the opcodes
+ * @stack: the given stack
+ * @line_num: number of the line within the monty file
+ */
+
 void exec(stack_t **stack, unsigned int line_num)
 {
 	unsigned int i = 0;
-	instruction_t opc[] =
-	{
-		{"push", push}, {"pall", pall}, {"pint", pint},{"pop", pop},
-		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
-		{NULL, NULL}
-/**
- *		{"div", div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
- *		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
- *		{"queue", queue}, {"stack", stack}, {NULL, NULL}
- */
+	instruction_t opc[] = {
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
+		{"sub", sub},
+		{"NULL", NULL}
 	};
-
-	while(opc[i].opcode)
+	while (opc[i].opcode)
 	{
 		if (strcmp(info.op, opc[i].opcode) == 0)
 		{
