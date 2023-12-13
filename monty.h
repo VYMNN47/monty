@@ -45,6 +45,7 @@ typedef struct info_s
 
 extern info_t info;
 
+int _atoi(const char *str);
 void exec(stack_t **stack, unsigned int line_num);
 void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int line_number);
