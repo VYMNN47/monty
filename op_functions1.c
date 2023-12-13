@@ -14,3 +14,9 @@ void add(stack_t **stack, unsigned int line_number)
 	(*stack)->next = (*stack)->next->next;
 	free(temp);
 }
+
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
