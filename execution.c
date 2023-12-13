@@ -6,13 +6,6 @@ void exec(stack_t **stack, unsigned int line_num)
 	instruction_t opc[] =
 	{
 		{"push", push}, {"pall", pall}, {NULL, NULL}
-/**
- * 		{"pint", f_pint}, {"pop", pop},
- *		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
- *		{"div", div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
- *		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
- *		{"queue", queue}, {"stack", stack}, {NULL, NULL}
- */
 	};
 
 	while(opc[i].opcode)
