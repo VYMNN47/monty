@@ -19,6 +19,14 @@ void free_stack(stack_t *stack)
         }
 }
 
+/**
+ * _atoi - Converts a string to an integer.
+ * @str: The input string to be converted.
+ *
+ * Return: The integer value converted from the input string.
+ *         Returns -1 if the string contains non-digit characters.
+ */
+
 int _atoi(const char *str)
 {
     int result = 0;
