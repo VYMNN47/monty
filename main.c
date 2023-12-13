@@ -40,11 +40,11 @@ int main(int argc, char **argv)
 			continue;
 		}
 		info.arg = strtok(NULL, " \t\n");
-		exec(&stack, line_num, buff, filem);
+		exec(&stack, line_num);
 		line_num++;
 	}
 	free(buff);
 	free_stack(stack);
 	fclose(filem);
-	return (EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
