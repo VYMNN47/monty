@@ -1,5 +1,12 @@
 #include "monty.h"
 
+/**
+ * pushq - Pushes an element onto a stack
+ * @stack: A pointer to the stack.
+ * @line_num: The line number associated with the pushq operation.
+ *
+ */
+
 void pushq(stack_t **stack, unsigned int line_num)
 {
 	stack_t *new_node, *temp;
