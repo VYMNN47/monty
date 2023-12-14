@@ -13,8 +13,7 @@ void exec(stack_t **stack, unsigned int line_num)
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
 		{"div", _div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
-		{"pstr", pstr}, {"rotl", rotl}, {NULL, NULL}
-/*		{"rotl", rotl}, {"rotr", rotr},*/
+		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}, {NULL, NULL}
 /*		{"queue", queue}, {"stack", stack}, {NULL, NULL} */
 	};
 
