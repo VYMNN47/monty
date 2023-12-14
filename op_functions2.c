@@ -131,9 +131,9 @@ void rotr(stack_t **stack, unsigned int line_number)
 
 
 	if (*stack == NULL || (*stack)->next == NULL)
-    {
-        return;
-    }
+	{
+		return;
+	}
 
     last = *stack;
     while (last->next != NULL)
