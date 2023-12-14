@@ -13,8 +13,8 @@ void exec(stack_t **stack, unsigned int line_num)
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"add", add}, {"nop", nop}, {"sub", sub},
 		{"div", _div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar},
-		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}, {NULL, NULL}
-/*		{"queue", queue}, {"stack", stack}, {NULL, NULL} */
+		{"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr},
+		{"queue", queue}, {"stack", stack_l}, {NULL, NULL}
 	};
 
 	while (opc[i].opcode)
@@ -31,4 +31,12 @@ void exec(stack_t **stack, unsigned int line_num)
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_num, info.op);
 		exit(EXIT_FAILURE);
 	}
+}
+
+void push(stack_t **stack, unsigned int line_num)
+{
+	if (info.format == 0)
+		pushs(stack, line_num);
+	else
+		pushq(stack, line_num);
 }

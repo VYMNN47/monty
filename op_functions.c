@@ -1,27 +1,27 @@
 #include "monty.h"
 
 /**
- * push - Adds a new node with a given value to the stack
+ * pushs - Adds a new node with a given value to the stack
  * @stack: Pointer to the head of the stack
  * @line_num: Line number in the Monty file
  *
  * Return: Void
  */
-void push(stack_t **stack, unsigned int line_num)
+void pushs(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	int value;
 
 	if (info.arg == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	value = _atoi(info.arg);
 
 	if (value < 0)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_num);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

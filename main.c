@@ -1,6 +1,6 @@
 #include "monty.h"
 
-info_t info = {NULL, 0};
+info_t info = {NULL, 0, 0};
 
 /**
  * main - Entry point for executing Monty bytecode

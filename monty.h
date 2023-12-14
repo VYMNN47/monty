@@ -42,6 +42,7 @@ typedef struct info_s
 {
 	char *op;
 	char *arg;
+	int format;
 } info_t;
 
 extern info_t info;
@@ -49,7 +50,7 @@ extern info_t info;
 int _atoi(const char *str);
 void exec(stack_t **stack, unsigned int line_num);
 void free_stack(stack_t *stack);
-void push(stack_t **stack, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_num);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
@@ -64,5 +65,8 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
-
+void stack_l(stack_t **stack, unsigned int line_number);
+void queue(stack_t **stack, unsigned int line_number);
+void pushq(stack_t **stack, unsigned int line_number);
+void pushs(stack_t **stack, unsigned int line_number);
 #endif
