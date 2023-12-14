@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 			continue;
 		}
 		info.op = strtok(buff, " \t\n");
-		if (!info.op || *info.op == '#')
+		if (!info.op || (info.op && *info.op == '#'))
 		{
 			line_num++;
 			continue;
