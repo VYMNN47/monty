@@ -55,6 +55,13 @@ void pchar(stack_t **stack, unsigned int line_number)
 	printf("%c\n", temp->n);
 }
 
+/**
+ * pstr - Prints the string contained in the stack.
+ * @stack: A pointer to the stack.
+ * @line_number: The line number associated with the pstr operation.
+ *
+ */
+
 void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
