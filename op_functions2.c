@@ -145,7 +145,7 @@ void rotr(stack_t **stack, unsigned int line_number)
 	secondLast->next = NULL;
 
 	last->next = *stack;
-    *stack = last;
+	*stack = last;
 
-    (void)line_number;
+	(void)line_number;
 }
