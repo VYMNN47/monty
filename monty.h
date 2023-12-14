@@ -40,8 +40,6 @@ typedef struct info_s
 {
 	char *op;
 	char *arg;
-	FILE *file;
-	char *buff;
 } info_t;
 
 extern info_t info;

@@ -15,9 +15,6 @@ void push(stack_t **stack, unsigned int line_num)
 	if (info.arg == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
-		fclose(info.file);
-		free(info.buff);
-		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 	value = _atoi(info.arg);
@@ -25,9 +22,6 @@ void push(stack_t **stack, unsigned int line_num)
 	if (value < 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
-		fclose(info.file);
-                free(info.buff);
-                free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -36,9 +30,6 @@ void push(stack_t **stack, unsigned int line_num)
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		fclose(info.file);
-                free(info.buff);
-                free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 
