@@ -135,8 +135,8 @@ void rotr(stack_t **stack, unsigned int line_number)
 		return;
 	}
 
-    last = *stack;
-    while (last->next != NULL)
+	last = *stack;
+	while (last->next != NULL)
     {
         secondLast = last;
         last = last->next;
