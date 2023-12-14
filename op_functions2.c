@@ -50,23 +50,18 @@ void pchar(stack_t **stack, unsigned int line_number)
 
 void pstr(stack_t **stack, unsigned int line_number)
 {
+	stack_t *temp = *stack;
+	int num;
+
 	(void)line_number;
 
-        if (!*stack)
-        {
-                printf("\n");
-		return;
-        }
-
-	while (*stack)
+	while (temp)
 	{
-		if ((*stack)->n == 0)
+		num = temp->n;
+		if (num == 0 || isalpha((char)num) == 0)
 			break;
-		if ((*stack)->n < 0 || (*stack)->n > 127)
-			break;
-		printf("%c", (*stack)->n);
-		*stack = (*stack)->next;
+		putchar(num);
+		temp = temp->next;
 	}
-
         printf("\n");
 }
