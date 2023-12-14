@@ -32,6 +32,9 @@ void pchar(stack_t **stack, unsigned int line_number)
 	if (!*stack)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
+		fclose(info.file);
+                free(info.buff);
+                free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -39,6 +42,9 @@ void pchar(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n",
 				line_number);
+                fclose(info.file);
+                free(info.buff);
+                free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
 
