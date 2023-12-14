@@ -58,7 +58,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	while (temp)
 	{
 		num = temp->n;
-		if (num == 0 || (num < 0 && num > 127))
+		if (num == 0 || isalpha((char)num) == 0)
 			break;
 		putchar(num);
 		temp = temp->next;
