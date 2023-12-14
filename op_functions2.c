@@ -85,7 +85,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 		printf("%c", num);
 		temp = temp->next;
 	}
-        printf("\n");
+	printf("\n");
 }
 
 /**
