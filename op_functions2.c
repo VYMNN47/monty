@@ -140,11 +140,11 @@ void rotr(stack_t **stack, unsigned int line_number)
 	{
 		secondLast = last;
 		last = last->next;
-    }
+	}
 
-    secondLast->next = NULL;
+	secondLast->next = NULL;
 
-    last->next = *stack;
+	last->next = *stack;
     *stack = last;
 
     (void)line_number;
