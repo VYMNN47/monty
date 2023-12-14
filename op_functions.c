@@ -3,7 +3,7 @@
 /**
  * pushs - Adds a new node with a given value to the stack
  * @stack: Pointer to the head of the stack
- * @line_num: Line number in the Monty file
+ * @line_number: Line number in the Monty file
  *
  * Return: Void
  */

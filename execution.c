@@ -33,6 +33,13 @@ void exec(stack_t **stack, unsigned int line_num)
 	}
 }
 
+/**
+ * push - Pushes an element onto a stack based on a specified format.
+ * @stack: A pointer to the stack.
+ * @line_num: The line number associated with the push operation.
+ *
+ */
+
 void push(stack_t **stack, unsigned int line_num)
 {
 	if (info.format == 0)
