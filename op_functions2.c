@@ -88,6 +88,13 @@ void pstr(stack_t **stack, unsigned int line_number)
         printf("\n");
 }
 
+/**
+ * rotl - Rotates the stack to the top.
+ * @stack: A pointer to the stack.
+ * @line_number: The line number associated with the rotl operation.
+ *
+ */
+
 void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack, *h;
