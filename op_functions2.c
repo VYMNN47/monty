@@ -127,10 +127,10 @@ void rotl(stack_t **stack, unsigned int line_number)
 
 void rotr(stack_t **stack, unsigned int line_number)
 {
-    stack_t *last, *secondLast = NULL;
+	stack_t *last, *secondLast = NULL;
 
 
-    if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
     {
         return;
     }
