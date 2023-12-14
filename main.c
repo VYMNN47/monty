@@ -1,6 +1,6 @@
 #include "monty.h"
 
-info_t info = {NULL, 0};
+info_t info = {NULL, 0, NULL, NULL};
 
 /**
  * main - Entry point for executing Monty bytecode
@@ -14,10 +14,10 @@ int main(int argc, char **argv)
 {
 	FILE *filem;
 	char *buff = NULL;
-	size_t buff_len = 0;
-	unsigned int line_num = 1;
-	ssize_t read_line = 1;
 	stack_t *stack = NULL;
+	size_t buff_len = 0;
+	ssize_t read_line = 1;
+	unsigned int line_num = 1;
 
 	if (argc != 2)
 	{
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 			line_num++;
 			continue;
 		}
-		info.arg = strtok(NULL, " \t\n");
+		info.arg = strtok(NULL, " \t\n"), info.file = filem, info.buff = buff;
 		if (read_line > 0)
 			exec(&stack, line_num);
 		line_num++;
