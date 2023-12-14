@@ -27,6 +27,13 @@ void mod(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 
+/**
+ * pchar - Prints the character at the top of the stack.
+ * @stack: A pointer to the stack.
+ * @line_number: The line number associated with the pchar operation.
+ *
+ */
+
 void pchar(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
