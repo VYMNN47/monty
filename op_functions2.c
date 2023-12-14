@@ -118,6 +118,13 @@ void rotl(stack_t **stack, unsigned int line_number)
 	(*stack) = h;
 }
 
+/**
+ * rotr - Rotates the stack to the bottom.
+ * @stack: A pointer to the stack.
+ * @line_number: The line number associated with the rotr operation.
+ *
+ */
+
 void rotr(stack_t **stack, unsigned int line_number)
 {
     stack_t *last, *secondLast = NULL;
