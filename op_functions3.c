@@ -22,8 +22,8 @@ void pushq(stack_t **stack, unsigned int line_num)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
-    	}
-    	temp = *stack;
+	}
+	temp = *stack;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
