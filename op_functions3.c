@@ -71,7 +71,7 @@ void queue(stack_t **stack, unsigned int line_number)
 
 void stack_l(stack_t **stack, unsigned int line_number)
 {
-        (void)stack;
+	(void)stack;
         (void)line_number;
         info.format = 0;
 }
