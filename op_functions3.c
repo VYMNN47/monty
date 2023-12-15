@@ -12,8 +12,8 @@ void pushq(stack_t **stack, unsigned int line_num)
 	stack_t *new_node, *temp;
 	int value;
 
-    	if (info.arg == NULL)
-    	{
+	if (info.arg == NULL)
+	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
     	}
