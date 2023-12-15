@@ -18,8 +18,8 @@ void pushq(stack_t **stack, unsigned int line_num)
 		exit(EXIT_FAILURE);
     	}
 	value = _atoi(info.arg);
-    	if (value < 0)
-    	{
+	if (value < 0)
+	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_num);
 		exit(EXIT_FAILURE);
     	}
