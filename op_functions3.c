@@ -48,6 +48,13 @@ void pushq(stack_t **stack, unsigned int line_num)
 	}
 }
 
+/**
+ * queue - Sets the stack format to queue mode.
+ * @stack: A pointer to the stack (unused in this function).
+ * @line_number: The line number associated with the queue operation (unused in this function).
+ *
+ */
+
 void queue(stack_t **stack, unsigned int line_number)
 {
 	(void)stack;
